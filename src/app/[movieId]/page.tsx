@@ -1,0 +1,7 @@
+const Page = async ({ params }: { params: Promise<{ movieId: string }> }) => {
+  const { movieId } = await params;
+
+  console.log(movieId);
+  return <div>dynamic page {movieId}</div>;
+};
+export default Page;
