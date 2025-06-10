@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 import { getMovieById } from "@/utils/getMovieById";
 import { MovieTrailer } from "@/components/MovieTrailer";
+import { MovieDetails } from "@/types";
 
 export const MovieDetail = ({ movieId }: { movieId: string }) => {
-  const [movie, setMovie] = useState({});
+  const [movie, setMovie] = useState<MovieDetails>();
 
   useEffect(() => {
     const getMovie = async () => {
